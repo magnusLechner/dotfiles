@@ -1,0 +1,1 @@
+* * * * * /usr/bin/sh ~/git/configuration-files/cron/sync-configuration-files.sh >> ~/git/configuration-files/cron/cron-sync-configuration-files.log 2>&1
