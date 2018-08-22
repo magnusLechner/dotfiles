@@ -10,8 +10,8 @@ echo ">>> script to sync dotfiles started <<<"
 echo $(date)
 
 # 
-dotfiles_repo = `~/git/dotfiles`
-cd dotfiles_repo
+dotfiles_repo=~/git/dotfiles
+cd $dotfiles_repo
 
 # pull from remote branch and print result
 git pull | echo
