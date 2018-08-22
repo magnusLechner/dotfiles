@@ -15,23 +15,23 @@ cd $dotfiles_repo
 echo "print working directory: $(pwd)"
 
 # pull from remote branch and print result
-git pull | echo
+git pull | echo -e
 
 # copy local dotfiles into local git repository
 cp ~/.vimrc $dotfiles_repo
 cp ~/.tmux.conf $dotfiles_repo
 
 # check if local git repo contains any changes
-echo `git status -u`
+echo -e `git status -u`
 if git status -u | grep -q "Changes not staged for commit:"; then
-        echo "Changes detected. Trying to commit these changes to remote repository."
+        echo -e "Changes detected. Trying to commit these changes to remote repository."
 	
         # stash changes and commit them
 	git add -A
 	git commit -m "CRON: updated dotfiles" -m "For further information see 'crontab -e'. You can disable this cron job by writing '#' as first character of the line you want to disable (mark as comment)."
 	
         # push the commited files
-	echo `git push`
+	echo -e `git push`
 else
 	echo "No changes to commit."
 fi
