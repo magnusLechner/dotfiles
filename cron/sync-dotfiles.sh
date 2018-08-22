@@ -18,8 +18,8 @@ echo "print working directory: $(pwd)"
 git pull | echo
 
 # copy local dotfiles into local git repository
-cp ~/.vimrc dotfiles_repo
-cp ~/.tmux.conf dotfiles_repo
+cp ~/.vimrc $dotfiles_repo
+cp ~/.tmux.conf $dotfiles_repo
 
 # check if local git repo contains any changes
 echo `git status -u`
