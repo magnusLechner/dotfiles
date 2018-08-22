@@ -4,7 +4,7 @@
 # The dotfiles are only locally modified and never remote
 # Therefore there can never be changed from upstream and git pull will never fail
 
-echo ">>> script to sync configuration files started <<<"
+echo ">>> script to sync dotfiles started <<<"
 
 # print current time
 echo $(date)
@@ -27,7 +27,7 @@ if git status -u | grep -q "Changes not staged for commit:"; then
 	
         # stash changes and commit them
 	git add -A
-	git commit -m "CRON: updated configuration files" -m "For further information see 'crontab -e'. You can disable this cron job by writing '#' as first character of the line you want to disable (mark as comment)."
+	git commit -m "CRON: updated dotfiles" -m "For further information see 'crontab -e'. You can disable this cron job by writing '#' as first character of the line you want to disable (mark as comment)."
 	
         # push the commited files
 	echo `git push`
@@ -38,4 +38,4 @@ fi
 # print current time
 echo $(date)
 
-echo ">>> script to sync configuration files finished <<<"
+echo ">>> script to sync dotfiles finished <<<"
