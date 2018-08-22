@@ -12,7 +12,7 @@ echo $(date)
 # change into dotfiles repository directory
 dotfiles_repo=~/git/dotfiles
 cd $dotfiles_repo
-echo "print working directory: \$(pwd)"
+echo "print working directory: $(pwd)"
 
 # pull from remote branch and print result
 git pull | echo
