@@ -5,8 +5,24 @@ create_symbolic_links () {
     then
         echo ERROR: Number of supplied arguments: $#
     else
-        echo ---- TODO: put logic here ----
-        echo One or two arguments.
+        source="$1"
+        # standard dotfile destination
+        destination=$HOME
+        
+        # check if a specific destination is provided
+        if [ -n "$2" ]
+        then
+            destination=$2
+        fi
+
+        # schauen ob das geht 
+        source=$HOME/.test
+        destination=$HOME/test-dir/.test
+        
+        source=$HOME/test-dir/.test
+        destination=$HOME/.test
+
+        echo Create a symbolic link from $source to $destination
     fi
 }
 
