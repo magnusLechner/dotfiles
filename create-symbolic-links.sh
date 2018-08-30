@@ -3,11 +3,11 @@
 create_symbolic_links () {
     if [ $# -eq 0 ] || [ $# -gt 2 ]
     then
-        echo ERROR: Number of supplied arguments: "$($#)"
+        echo ERROR: Number of supplied arguments: $#
     else
+        echo ---- TODO: put logic here ----
         echo One or two arguments.
     fi
-    echo WUSA
 }
 
 echo ---script to create symbolic links started---
