@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 # This script executes under following assumptions:
 # The dotfiles are only locally modified and never remote

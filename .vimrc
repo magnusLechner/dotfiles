@@ -8,7 +8,7 @@ call plug#begin('~/.vim/plugged')
 "Plug 'rust-lang/rust.vim'
 "Plug 'valloric/YouCompleteMe'
 
-" allows vim-sessions
+" Allows vim-sessions
 Plug 'tpope/vim-obsession'
 
 call plug#end()
@@ -30,7 +30,12 @@ call plug#end()
 "let g:syntastic_check_on_wq = 0
 
 " Further custom properties
+" Shows number on lines
 :set number
+" Replace <tab> by whitespace
+:set expandtab
+:set tabstop=4
+:set shiftwidth=4
 
 " Key-Mappings
 ":nmap <F8> :TagbarToggle<CR> 
