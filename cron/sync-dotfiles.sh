@@ -24,7 +24,7 @@ cp ~/.tmux.conf $dotfiles_repo
 # check if local git repo contains any changes
 echo `git status -u`
 
-if git status -u | grep -q "Changes not staged for commit:"; 
+if git status -u | grep -q "Changes not staged for commit:"
 then
     echo Changes detected. Trying to commit these changes to remote repository.
 	
