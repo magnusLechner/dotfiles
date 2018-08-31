@@ -1,11 +1,17 @@
 #!/usr/bin/env bash
 
-create_symbolic_links () {
+prepare () {
+    # change into dotfiles repository directory
+    dotfiles_repo=$HOME/git/dotfiles
+    cd $dotfiles_repo
+}
+
+create_symbolic_link () {
     if [ $# -eq 0 ] || [ $# -gt 2 ]
     then
         echo ERROR: Number of supplied arguments: $#
     else
-        source="$1"
+        source=$dotfiles_repo/"$1"
         # standard dotfile destination
         destination=$HOME
         
@@ -15,35 +21,28 @@ create_symbolic_links () {
             destination=$2
         fi
 
-        # schauen ob das geht 
-        source=$HOME/.test
-        destination=$HOME/test-dir/.test
-        
-        source=$HOME/test-dir/.test
-        destination=$HOME/.test
-
-        echo Create a symbolic link from $source to $destination
+        # create directory if it does not exist and create symbolic link
+        mkdir -p $destination && ln -s $source $destination
     fi
 }
 
-echo ---script to create symbolic links started---
+# there might be a time where a dotfile is not under $HOME but
+# $HOME/some/path/.my-dotfile or /etc/some/path/.my-dotfile 
+# and therefore you can use
+# create_symbolic_link my-dir/.my-dotfile /etc/test-dir/.my-dotfile
+create_symbolic_links () {
+    prepare
 
-# print current time
-echo $(date)
+    # define all files for which a symbolic link will be created
+    #files=( ".vimrc" ".tmux.conf" )
+    files=( "README.md" )
+    
+    for index in "${files[@]}"
+    do
+        create_symbolic_link $index
+    done
 
-# change into dotfiles repository directory
-dotfiles_repo=$HOME/git/dotfiles
-cd $dotfiles_repo
-echo print working directory: $(pwd)
+    create_symbolic_link README.md $HOME/test
+}
 
-# define all files for which a symbolic link will be created
-#ln -s $dotfiles_repo/README.md $HOME
-#ln -s $dotfiles_repo/README.md $HOME/mydir/README.md
-create_symbolic_links $dotfiles_repo/README.md 
-create_symbolic_links $dotfiles_repo/README.md ASD
-create_symbolic_links $dotfiles_repo/README.md asd asd
-
-# print current time
-echo $(date)
-
-echo ---script to create symbolic links finished---
+create_symbolic_links
