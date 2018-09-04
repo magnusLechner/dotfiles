@@ -1,6 +1,8 @@
 " Used Plugin-Manager: vim-plug
 " Specify a directory for plugins
 " Avoid using standard Vim directory names like 'plugin'
+
+" Install plugin with ':PlugInstall'
 call plug#begin('~/.vim/plugged')
 
 " Plugins for rust-lang

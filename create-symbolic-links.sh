@@ -34,14 +34,12 @@ create_symbolic_links () {
     prepare
 
     # define all files for which a symbolic link will be created
-    files=( ".vimrc" ".tmux.conf" )
+    files=( ".vimrc" ".tmux.conf" ".bashrc" )
     
     for index in "${files[@]}"
     do
         create_symbolic_link $index
     done
-
-    create_symbolic_link README.md $HOME/test
 }
 
 create_symbolic_links
