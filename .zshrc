@@ -10,6 +10,10 @@ export ZSH="/home/magnus/.oh-my-zsh"
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="agnoster"
 
+# hide user@hostname
+DEFAULT_USER=$USER
+prompt_context() {}
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -81,4 +85,5 @@ BROWSER=/usr/bin/chromium
 EDITOR=/usr/bin/vim
 
 # PATH variable
-export PATH="${PATH}:$HOME/.cargo/bin"
+export RUST_HOME="$HOME/.cargo/bin"
+export PATH="${PATH}:$RUST_HOME"
