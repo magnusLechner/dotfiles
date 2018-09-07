@@ -1,5 +1,5 @@
 # show current working path
-export PS1="%d%% "
+export PS1="%d$ "
 
 # aliases
 alias ls='ls --color=auto'
