@@ -5,8 +5,6 @@ yaourt -S --noconfirm --needed archlinux-keyring
 
 # zsh
 yaourt -S --noconfirm --needed zsh
-yaourt -S --noconfirm --needed zsh-completions
-yaourt -S --noconfirm --needed oh-my-zsh-git
 
 # editor
 yaourt -S --noconfirm --needed visual-studio-code-bin
