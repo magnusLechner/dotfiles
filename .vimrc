@@ -1,4 +1,7 @@
-" Used Plugin-Manager: vim-plug
+""""""""""""""""""""""""""
+"        vim-plug        "
+""""""""""""""""""""""""""
+
 " Specify a directory for plugins
 " Avoid using standard Vim directory names like 'plugin'
 " Install plugin with ':PlugInstall'
@@ -24,8 +27,10 @@ Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
+""""""""""""""""""""""""""
+"       lightline        "
+""""""""""""""""""""""""""
 
-" lightline configurations
 " show status line
 set laststatus=2
 " disable standard mode indicator
@@ -35,8 +40,10 @@ if !has('gui_running')
     set t_Co=256
 endif
 
+""""""""""""""""""""""""""
+"       rust             "
+""""""""""""""""""""""""""
 
-" rust configurations
 " rustfmt: format on save
 "let g:rustfmt_autosave = 1
 
@@ -53,8 +60,10 @@ endif
 "let g:syntastic_check_on_open = 1
 "let g:syntastic_check_on_wq = 0
 
+""""""""""""""""""""""""""
+"   custom properties    "
+""""""""""""""""""""""""""
 
-" Further custom properties
 " Shows number on lines
 :set number
 " Replace <tab> by whitespace
@@ -62,8 +71,10 @@ endif
 :set tabstop=4
 :set shiftwidth=4
 
+""""""""""""""""""""""""""
+"     Key-Mappings       "
+""""""""""""""""""""""""""
 
-" Key-Mappings
 ":nmap <F8> :TagbarToggle<CR> 
 :imap jk <Esc>
 map <C-d> :NERDTreeToggle<CR>
