@@ -1,7 +1,6 @@
 " Used Plugin-Manager: vim-plug
 " Specify a directory for plugins
 " Avoid using standard Vim directory names like 'plugin'
-
 " Install plugin with ':PlugInstall'
 call plug#begin('~/.vim/plugged')
 
@@ -18,8 +17,13 @@ Plug 'itchyny/lightline.vim'
 Plug 'jiangmiao/auto-pairs'
 " file system explorer
 Plug 'scrooloose/nerdtree'
+" reload file if extern modified
+Plug 'djoshea/vim-autoread'
+" navigate seamlessly between vim and tmux
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
+
 
 " lightline configurations
 " show status line
@@ -30,6 +34,7 @@ set noshowmode
 if !has('gui_running')
     set t_Co=256
 endif
+
 
 " rust configurations
 " rustfmt: format on save
@@ -48,6 +53,7 @@ endif
 "let g:syntastic_check_on_open = 1
 "let g:syntastic_check_on_wq = 0
 
+
 " Further custom properties
 " Shows number on lines
 :set number
@@ -55,6 +61,7 @@ endif
 :set expandtab
 :set tabstop=4
 :set shiftwidth=4
+
 
 " Key-Mappings
 ":nmap <F8> :TagbarToggle<CR> 
