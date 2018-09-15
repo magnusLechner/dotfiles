@@ -21,6 +21,17 @@ Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
+" lightline configurations
+" show status line
+set laststatus=2
+" disable standard mode indicator
+set noshowmode
+" make mode indicator coloured
+if !has('gui_running')
+    set t_Co=256
+endif
+
+" rust configurations
 " rustfmt: format on save
 "let g:rustfmt_autosave = 1
 
@@ -48,3 +59,4 @@ call plug#end()
 " Key-Mappings
 ":nmap <F8> :TagbarToggle<CR> 
 :imap jk <Esc>
+map <C-d> :NERDTreeToggle<CR>
