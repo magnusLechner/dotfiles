@@ -12,6 +12,12 @@ call plug#begin('~/.vim/plugged')
 
 " Allows vim-sessions
 Plug 'tpope/vim-obsession'
+" light and configurable statusline/tabline plugin for Vim
+Plug 'itchyny/lightline.vim'
+" insert or delete brackets, parens, quotes in pair.
+Plug 'jiangmiao/auto-pairs'
+" file system explorer
+Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
