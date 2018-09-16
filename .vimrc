@@ -78,3 +78,13 @@ endif
 ":nmap <F8> :TagbarToggle<CR> 
 :imap jk <Esc>
 map <C-d> :NERDTreeToggle<CR>
+
+" disable arrow keys
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+inoremap <Up> <Nop>
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
