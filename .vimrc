@@ -7,10 +7,6 @@
 " Install plugin with ':PlugInstall'
 call plug#begin('~/.vim/plugged')
 
-" Plugins for rust-lang
-Plug 'rust-lang/rust.vim'
-Plug 'valloric/YouCompleteMe'
-
 " Allows vim-sessions
 Plug 'tpope/vim-obsession'
 " light and configurable statusline/tabline plugin for Vim
@@ -38,27 +34,6 @@ set noshowmode
 if !has('gui_running')
     set t_Co=256
 endif
-
-""""""""""""""""""""""""""
-"       rust             "
-""""""""""""""""""""""""""
-
-" YouCompleteMe
-let g:ycm_rust_src_path = '/usr/local/rust/rustc-1.5.0/src'
-
-" rustfmt: format on save
-let g:rustfmt_autosave = 1
-
-
-" Syntastic: recommended settings (for Syntax-Checking)
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}  "leads to problems with tagbar
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
 
 """"""""""""""""""""""""""
 "   custom properties    "

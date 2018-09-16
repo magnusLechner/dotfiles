@@ -15,6 +15,8 @@ yaourt -S --noconfirm --needed tmux
 yaourt -S --noconfirm --needed jetbrains-toolbox
 
 # misc
+yaourt -S --noconfirm --needed rofi
+
 yaourt -S --noconfirm --needed discord
 yaourt -S --noconfirm --needed spotify
 yaourt -S --noconfirm --needed dropbox
