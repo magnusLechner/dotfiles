@@ -8,9 +8,8 @@
 call plug#begin('~/.vim/plugged')
 
 " Plugins for rust-lang
-"Plug 'majutsushi/tagbar'
-"Plug 'rust-lang/rust.vim'
-"Plug 'valloric/YouCompleteMe'
+Plug 'rust-lang/rust.vim'
+Plug 'valloric/YouCompleteMe'
 
 " Allows vim-sessions
 Plug 'tpope/vim-obsession'
@@ -44,21 +43,22 @@ endif
 "       rust             "
 """"""""""""""""""""""""""
 
-" rustfmt: format on save
-"let g:rustfmt_autosave = 1
+" YouCompleteMe
+let g:ycm_rust_src_path = '/usr/local/rust/rustc-1.5.0/src'
 
-" tagbar: point to ctags executable if not in $PATH
-"let g:tagbar_ctags_bin = /to/path//of/ctags
+" rustfmt: format on save
+let g:rustfmt_autosave = 1
+
 
 " Syntastic: recommended settings (for Syntax-Checking)
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}  "leads to problems with tagbar
-"set statusline+=%*
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}  "leads to problems with tagbar
+set statusline+=%*
 
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_check_on_open = 1
-"let g:syntastic_check_on_wq = 0
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 """"""""""""""""""""""""""
 "   custom properties    "
@@ -75,7 +75,6 @@ endif
 "     Key-Mappings       "
 """"""""""""""""""""""""""
 
-":nmap <F8> :TagbarToggle<CR> 
 :imap jk <Esc>
 map <C-d> :NERDTreeToggle<CR>
 
