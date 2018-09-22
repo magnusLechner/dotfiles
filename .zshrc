@@ -86,4 +86,5 @@ EDITOR=/usr/bin/vim
 
 # PATH variable
 export RUST_HOME="$HOME/.cargo/bin"
-export PATH="${PATH}:$RUST_HOME"
+export IDEA_HOME="$HOME/idea-IC-182.4505.22/bin"
+export PATH="${PATH}:$RUST_HOME:$IDEA_HOME"
