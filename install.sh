@@ -10,9 +10,8 @@ yaourt -S --noconfirm --needed zsh
 yaourt -S --noconfirm --needed visual-studio-code-bin
 yaourt -S --noconfirm --needed vim
 
-# programming
+# programming - download IDE manually
 yaourt -S --noconfirm --needed tmux
-yaourt -S --noconfirm --needed jetbrains-toolbox
 
 # misc
 yaourt -S --noconfirm --needed rofi
