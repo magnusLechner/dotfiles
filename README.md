@@ -5,7 +5,7 @@ Zum Zeitersparnis, einer leichteren Wiederverwendung, sowie zur Sicherung der Ei
 ## Limitierungen
 
 - Um eine komplexe und aufwandreiche (teils sogar unmögliche) Konfliktauflösung von Änderungen an Dateien zu vermeiden, wird davon ausgegangen, dass nie Änderungen vom Remote Repository, sondern nur vom lokalen Repository eingereicht werden.
-- Als Folge des vorausgegangen Punktes bedeutet das, dass das Script momentan nur auf einem Rechner ausgeführt werden darf.
+- Als Folge des vorausgegangen Punktes bedeutet das, dass das Script momentan nur auf einem Rechner ausgeführt werden darf oder die remote Änderungen ohne Konflikt aufgelöst werden können.
 
 ## VIM
 
