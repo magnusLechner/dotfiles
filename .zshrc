@@ -67,7 +67,8 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git zsh-completions
+  git
+  zsh-completions
 )
 
 # zsh-completions needs these
@@ -88,3 +89,5 @@ EDITOR=/usr/bin/vim
 export RUST_HOME="$HOME/.cargo/bin"
 export IDEA_HOME="$HOME/idea-IC-182.4505.22/bin"
 export PATH="${PATH}:$RUST_HOME:$IDEA_HOME"
+
+eval `dircolors ~/.dir_colors`
