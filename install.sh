@@ -5,6 +5,8 @@ yaourt -S --noconfirm --needed archlinux-keyring
 
 # zsh
 yaourt -S --noconfirm --needed zsh
+# for theme see: https://github.com/Anthony25/gnome-terminal-colors-solarized
+# and https://github.com/agnoster/agnoster-zsh-theme
 
 # editor
 yaourt -S --noconfirm --needed visual-studio-code-bin
