@@ -1,0 +1,4 @@
+#rofi
+"rofi -show run"
+    m:0x8 + c:36
+    Alt + Return 

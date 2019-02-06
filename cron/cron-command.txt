@@ -1,1 +1,3 @@
+# systemctl enable cronie
+# systemctl start cronie
 */15 * * * * /usr/bin/sh ~/git/dotfiles/cron/sync-dotfiles.sh >> ~/git/configuration-files/cron/cron-sync-dotfiles.log 2>&1

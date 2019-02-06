@@ -17,6 +17,7 @@ yaourt -S --noconfirm --needed tmux
 
 # misc
 yaourt -S --noconfirm --needed rofi
+yaourt -S --noconfirm --needed xbindkeys
 
 yaourt -S --noconfirm --needed discord
 yaourt -S --noconfirm --needed spotify

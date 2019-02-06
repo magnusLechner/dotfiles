@@ -34,7 +34,7 @@ create_symbolic_links () {
     prepare
 
     # define all files for which a symbolic link will be created
-    files=( ".vimrc" ".tmux.conf" ".bashrc" ".bash_profile" ".bashrc.aliases" ".zshrc")
+    files=( ".vimrc" ".tmux.conf" ".bashrc" ".bash_profile" ".bashrc.aliases" ".zshrc" ".xbindkeysrc" ".xprofile" )
     
     for index in "${files[@]}"
     do
