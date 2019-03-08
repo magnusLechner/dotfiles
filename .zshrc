@@ -89,6 +89,7 @@ EDITOR=/usr/bin/vim
 # PATH variable
 export RUST_HOME="$HOME/.cargo/bin"
 export IDEA_HOME="$HOME/idea-IC-182.4505.22/bin"
-export PATH="${PATH}:$RUST_HOME:$IDEA_HOME"
+export CHROME_BIN="/usr/bin/chromium"
+export PATH="${PATH}:$RUST_HOME:$IDEA_HOME:$CHROME_BIN"
 
 eval `dircolors ~/.dir_colors`
